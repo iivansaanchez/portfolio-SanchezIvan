@@ -1,0 +1,18 @@
+name: "mi primer workflow"
+
+on:
+  push:
+    branches:
+      - main
+    workflows_dispatch:
+
+jobs:
+  hello_world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Hello World"
+        run: echo "Hello World"
+      - name: "Traernos el codigo"
+      - uses: actions/checkout@v3
+      - name: "Ver los archivos"
+        run: ls
